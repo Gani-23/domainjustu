@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/index.js" defer></script>
+    <title>Subdomain Status</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">Subdomain Status Monitor</h1>
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <input id="subdomainInput" type="text" placeholder="Enter subdomain URL" class="border p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button id="addSubdomainButton" class="bg-blue-500 text-white p-3 mt-4 w-full rounded-lg hover:bg-blue-700 transition duration-300">Add Subdomain</button>
+            <p id="feedbackMessage" class="text-center mt-4"></p>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg">
+                <thead>
+                    <tr>
+                        <th class="py-4 px-6 bg-gray-200 text-left text-gray-600 font-semibold">Subdomain</th>
+                        <th class="py-4 px-6 bg-gray-200 text-left text-gray-600 font-semibold">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="statusTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
