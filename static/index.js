@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const subdomainInput = document.getElementById('subdomainInput');
     const addSubdomainButton = document.getElementById('addSubdomainButton');
     const feedbackMessage = document.getElementById('feedbackMessage');
-
+ 
     function fetchStatuses() {
         fetch('/status')
             .then(response => response.json())
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
     }
-
+ 
     function addSubdomain() {
         const subdomain = subdomainInput.value.trim();
         if (subdomain) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
             feedbackMessage.className = 'text-red-500';
         }
     }
-
+ 
     addSubdomainButton.addEventListener('click', addSubdomain);
     setInterval(fetchStatuses, 5000);
     fetchStatuses();
